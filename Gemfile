@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-gem "minitest-rails"
+gem 'minitest-rails'
+gem 'themoviedb'
 
 group :test do
-  gem "minitest-rails-capybara"
+  gem 'minitest-rails-capybara'
   gem 'turn', require: false
   gem 'better_errors'
   gem 'binding_of_caller'
