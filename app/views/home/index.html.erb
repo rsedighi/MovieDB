@@ -1,14 +1,46 @@
 <h1></h1>
 <div class="jumbotron">
- <div class="container">
-  <h1>Welcome to MovieDB</h1>
-  <p>Tell us who you like to watch, and we'll tell you what movies to watch.</p>
-  <div class="form-group", "btn btwn-primary btn-lg">
-  <input type="text" class="tokenize" placeholder="Begin by entering the name of actor/actress..."><p>
-    <script>
+  <div class="container">
+    <h1>Welcome to MovieDB</h1>
+    <p>Tell us who you like to watch, and we'll tell you what movies to watch.</p>
+    <div class="form-group", "btn btwn-primary btn-lg">
+
+
+      <input type="text" class="tokenize" placeholder="Begin by entering the name of actor/actress..."><p>
+      <script>
+
       $('input.tokenize').tokenfield();
-    </script>
-    <p><a class="btn btn-primary btn-lg" role="button">Go</a></p>
+      </script>
+      <p><a class="btn btn-primary btn-lg" role="button">Go</a></p>
+    </div>
   </div>
-</div>
+  <div>
+
+
+
+    <h1>Search for a movie</h1>
+    <%= form_tag("/search", :method => "get") do %>
+    <!-- <%#= text_field_tag(:query, nil, :class => "input-xlarge searchInput") %> -->
+
+    <%= text_field_tag(:query, nil, class: "tokenize") %>
+    <p>
+      <input type="submit" value="Go" onclick="window.location='search_path';" class="btn btn-primary btn-lg" />
+    </p>
+    <script>
+    $('input.tokenize').tokenfield();
+    </script>
+
+    <% end %>
+
+
+    <h1>Search for a movie</h1>
+    <%= form_tag("/search", :method => "get") do %>
+
+    <%= text_field_tag(:query, nil) %>
+
+    <% end %>
+
+
+
+  </div>
 </div>

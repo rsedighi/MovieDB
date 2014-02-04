@@ -1,5 +1,11 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  require 'themoviedb'
+
+  before_filter :set_config
+  Tmdb::Api.key("725e76ad499237551bbd1804bd35587a")
+
+  def set_config
+    @configuration = Tmdb::Configuration.new
+  end
 end
