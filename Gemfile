@@ -10,6 +10,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'simplecov'
   gem 'launchy'
+  gem 'pry-rails'
 end
 
 gem 'rails', '4.0.2'

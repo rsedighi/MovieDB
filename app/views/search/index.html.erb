@@ -1,5 +1,5 @@
-<h3>Search Results</h3>
 
+<h3>Search Results</h3>
 
 <% @people.each do |person| %>
   <ul><%= link_to person_path(person.id) do %>
@@ -11,7 +11,7 @@
 <% end %>
 
 
-<% @movie.each do |movie| %>
+<% @film.each do |movie| %>
     <ul>
       <li>
         <%= link_to movie_path(movie.id) do %>
@@ -34,4 +34,4 @@
       </li>
     </ul>
 
-    <% end if @movie %>
+    <% end if @film %>
