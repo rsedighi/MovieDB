@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'minitest-rails'
-gem 'themoviedb'
+gem 'themoviedb', :git => "git://github.com/ahmetabdi/themoviedb.git"
 
 group :development, :test do
   gem 'minitest-rails-capybara'

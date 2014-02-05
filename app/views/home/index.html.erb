@@ -5,22 +5,18 @@
     <p>Tell us who you like to watch, and we'll tell you what movies to watch.</p>
     <div class="form-group", "btn btwn-primary btn-lg">
       <%= form_tag("/search", :method => "get") do %>
-      <%= text_field_tag(:query, nil, class: "tokenize", placeholder:"Begin by entering the name of actor/acress...") %></p>
+      <%= text_field_tag :query, nil, class: "tokenize", placeholder:"Begin by entering the name of actor/acress..." %></p>
       <!-- <input type="text" class="tokenize" placeholder="Begin by entering the name of cast member"><p> -->
       <input type="submit" value="Go" onclick="window.location='search_path';" class="btn btn-primary btn-lg" />
-
       <script>
-      // $('input.tokenize').tokenfield();
-      $('input.tokenize').on('beforeCreateToken', function (e)
-        {var token = e.token.value.split('|')
-         e.token.value = token[1] || token[0]
-         e.token.label = token[1] ? token[0] + '(' + token[1] + ')' : token[0]}).tokenfield();
+      $('input.tokenize').tokenfield();
       </script>
 <!--       <p><a class="btn btn-primary btn-lg" role="button">Go</a></p> -->
     <% end %>
     </div>
   </div>
   <div>
+
 
 
 

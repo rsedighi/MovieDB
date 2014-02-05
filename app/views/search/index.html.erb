@@ -1,6 +1,7 @@
 <h3>Search Results</h3>
 
-<% @person.each do |person| %>
+
+<% @people.each do |person| %>
   <ul><%= link_to person_path(person.id) do %>
    <li> <%= image_tag("#{@configuration.base_url}w154#{person.profile_path}") if person.profile_path %>
         <%= link_to person.name, person_path(person.id) %>
@@ -8,7 +9,6 @@
     </li>
   </ul>
 <% end %>
-
 
 
 <% @movie.each do |movie| %>
@@ -34,4 +34,4 @@
       </li>
     </ul>
 
-    <% end %>
+    <% end if @movie %>
