@@ -1,66 +1,29 @@
 <h3>Search Results</h3>
 
-
-<!--
-<div class="row">
-<%# @results.each do |result| %>
-  <div class="col-xs-6 col-md-3">
-    <a href="<%#= link_to result[0], "http://imdb.com/title/#{result[1]}", class: "thumbnail" %>">
-      <%#= image_tag('http://placehold.it/154x213&text=movie') %><br>
-    </a>
-    <%#= link_to result[0], "http://imdb.com/title/#{result[1]}" %>
-  </div>
-    <%# end %>
-
-</div>
- -->
-
 <div class="row">
   <% @people.each do |person| %>
-  <div class="col-xs-6 col-md-3">
-      <%#= link_to image_tag("#{@configuration.base_url}w154#{person.profile_path}") %>
-      <%= link_to person_path(person.id) do %>
-      <%= image_tag("#{@configuration.base_url}w154#{person.profile_path}") if person.profile_path %><br>
-        <%= link_to person.name, person_path(person.id) %>
-
-      <%#= image_tag("#{@configuration.base_url}w154#{person.profile_path}") if person.profile_path %>
-        <%#= link_to person.name, person_path(person.id) %>
+  <div class="col-md-2 col-md-1">
+    <%= link_to person_path(person.id) do %>
+    <%= image_tag("#{@configuration.base_url}w154#{person.profile_path}") if person.profile_path %><br>
+    <%= link_to person.name, person_path(person.id) %>
+  <% end %>
   </div>
-<% end %>
-<% end %>
+  <% end %>
 </div>
 
 
 <div class="row">
   <% @results.each do |result| %>
-  <!-- <div class="col-sm-6 col-md-4"> -->
-  <div class="col-xs-6 col-md-3">
+  <div class="col-md-6 col-md-3">
     <div class="thumbnail">
-      <!-- <img data-src="http://placehold.it/154x213&text=movie"> -->
-      <%= link_to image_tag('http://placehold.it/154x213&text=movie'), "http://imdb.com/title/#{result[1]}" %>
+      <%= link_to image_tag("http://image.tmdb.org/t/p/w154#{result[2]}"), "http://imdb.com/title/#{result[1]}" %>
       <div class="caption">
         <h3><%= link_to result[0], "http://imdb.com/title/#{result[1]}" %></h3>
-        <!-- <p>some movie content</p> -->
       </div>
     </div>
   </div>
-      <% end %>
+  <% end %>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!--
 <div>

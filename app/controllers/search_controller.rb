@@ -19,9 +19,11 @@ class SearchController < ApplicationController
          @results = []
          mmatch.each do |overlapingMovie|
           mov = Tmdb::Movie.detail(overlapingMovie)
+          # binding.pry
           @title = mov.title
           @link = mov.imdb_id
-           @results << [@title, @link]
+          @poster = mov.poster_path
+           @results << [@title, @link, @poster]
          end
    # binding.pry
 
