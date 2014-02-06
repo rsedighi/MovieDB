@@ -1,6 +1,11 @@
 
 <h3>Search Results</h3>
 
+<% @results.each do |result| %>
+<p> <%= link_to result[0], "http://imdb.com/title/#{result[1]}" %>
+<% end %>
+</p>
+
 <% @people.each do |person| %>
   <ul><%= link_to person_path(person.id) do %>
    <li> <%= image_tag("#{@configuration.base_url}w154#{person.profile_path}") if person.profile_path %>
