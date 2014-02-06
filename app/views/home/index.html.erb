@@ -2,9 +2,13 @@
 
 <div class="jumbotron">
   <div class="container">
+    <div class="jumbo">
     <h1>Welcome to MovieDB</h1>
     <p>Tell us who you like to watch, and we'll tell you what movies to watch.</p>
     <div class="form-group", "btn btwn-primary btn-lg">
+    </div>
+
+
       <%= form_tag("/search", :method => "get") do %>
       <%= text_field_tag :query, nil, class: "tokenize", placeholder:"Begin by entering the name of actor/acress..." %></p>
       <!-- <input type="text" class="tokenize" placeholder="Begin by entering the name of cast member"><p> -->
