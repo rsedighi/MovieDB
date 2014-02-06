@@ -3,8 +3,11 @@
 
 <% @results.each do |result| %>
 <p> <%= link_to result[0], "http://imdb.com/title/#{result[1]}" %>
+<%#= image_tag result[0], "http://www.imdb.com/media/rm339643392/#{result[1]}" %>
+<%# end %>
 <% end %>
 </p>
+
 
 <% @people.each do |person| %>
   <ul><%= link_to person_path(person.id) do %>
