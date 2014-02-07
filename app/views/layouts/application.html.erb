@@ -6,8 +6,18 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation"  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" <%= link_to "MovieDB", root_path%></a></a>
+
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <body>
-<div class="container">
+    <div class="container">
 
 <%= yield %>
 

@@ -18,16 +18,38 @@ $jumbotron-bg:                          white;
      font-weight: bold;
 }
 
-
+body.homepage {
+background:url("movie01.jpg");
+background-size:1920px 1080px;
+background-repeat:no-repeat;
+background-position:-10px -175px;
+padding-top:40px;
+}
 
 body {
   background-color: #1E1E1E;
   color: #F7F7F7;
 }
 
-
 div.jumbo {
   color: #1E1E1E;
+}
+
+div.jumbotron {
+  padding-top:50px;
+  width: 800px;
+  height: 375px;
+  position:absolute;
+  left:50px;
+  top:40px;
+  background-color: transparent;
+  background:url("movie02.jpg");
+  background-size:800px 375px;
+  background-repeat:no-repeat;
+}
+
+div.jumbotron2 {
+  background-color: #ECF0F1;
 }
 
 .fire {
@@ -45,7 +67,3 @@ div.jumbo {
 .red {
   border: 2px solid red;
 }
-
-
-
-
