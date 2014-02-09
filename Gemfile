@@ -11,7 +11,6 @@ group :development, :test do
   gem 'launchy'
   gem 'pry-rails'
   gem 'minitest-rails'
-  gem 'themoviedb', :git => "git://github.com/ahmetabdi/themoviedb.git"
 end
 
 group :production do
@@ -30,6 +29,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', github: "twbs/bootstrap-sass"
 gem 'bootstrap_tokenfield_rails'
 gem 'rest_client'
+gem 'themoviedb', :git => "git://github.com/ahmetabdi/themoviedb.git"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
