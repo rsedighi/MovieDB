@@ -2,15 +2,7 @@ source 'https://rubygems.org'
 
 
 group :development, :test do
-  gem 'minitest-rails-capybara'
   gem 'sqlite3'
-  gem 'turn', require: false
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'simplecov'
-  gem 'launchy'
-  gem 'pry-rails'
-  gem 'minitest-rails'
 end
 
 group :production do
@@ -30,6 +22,14 @@ gem 'bootstrap-sass', github: "twbs/bootstrap-sass"
 gem 'bootstrap_tokenfield_rails'
 gem 'rest_client'
 gem 'themoviedb', :git => "git://github.com/ahmetabdi/themoviedb.git"
+  gem 'minitest-rails-capybara'
+  gem 'turn', require: false
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'simplecov'
+  gem 'launchy'
+  gem 'pry-rails'
+  gem 'minitest-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
