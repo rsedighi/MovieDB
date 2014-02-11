@@ -7,4 +7,4 @@ class MovieController < ApplicationController
     @similar_movies = Tmdb::Movie.similar_movies(params[:id])
   end
 end
-end
+

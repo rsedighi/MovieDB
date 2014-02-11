@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.0'
 
 
 
@@ -14,6 +14,7 @@ gem 'bootstrap-sass', github: "twbs/bootstrap-sass"
 gem 'bootstrap_tokenfield_rails'
 gem 'rest_client'
 gem 'themoviedb', :git => "git://github.com/ahmetabdi/themoviedb.git"
+
   gem 'minitest-rails-capybara'
   gem 'turn', require: false
   gem 'better_errors'
