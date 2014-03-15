@@ -14,6 +14,7 @@ gem 'bootstrap-sass', github: "twbs/bootstrap-sass"
 gem 'bootstrap_tokenfield_rails'
 gem 'rest_client'
 gem 'themoviedb', :git => "git://github.com/ahmetabdi/themoviedb.git"
+gem 'compass'
 
   gem 'minitest-rails-capybara'
   gem 'turn', require: false
